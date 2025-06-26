@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="styleadmin.css" />
+    <link rel="stylesheet" href="stylebutton.css" />
+    <script src="dateHere.js"></script>
+
+
+    <title>wmdrIot</title>
+  </head>
+  <body id="home">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">WMDR IoT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Gerbang Garasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Lantai Bawah</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Lantai Atas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Luar Ruang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#images">Images</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="logout-button" value="ok">Logout</a>
+            </li>
+<!--             <button class="btn btn-danger" onclick="logout()">Logout</button>
+            <button id="logoutBtn">Logout</button>
+ -->          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir navbar -->
+
+    <!-- Jumbotron -->
+    <section class="jumbotron text-center">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Gerbang Garasi Control Dashboard</h2>
+          </div>
+        </div>
+     <!--      <div id="dashboard">
+      <div class="relay-container"> -->
+        <div class="relay-card">
+          <h2>Relay 1</h2>
+          <p>Status: <span id="status1">Loading...</span></p>
+          <button id="btn1">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 2</h2>
+          <p>Status: <span id="status2">Loading...</span></p>
+          <button id="btn2">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 3</h2>
+          <p>Status: <span id="status3">Loading...</span></p>
+          <button id="btn3">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 4</h2>
+          <p>Status: <span id="status4">Loading...</span></p>
+          <button id="btn4">Toggle</button>
+        </div>
+        <div class="relay-card">
+          <h2>Relay 5</h2>
+          <p>Status: <span id="status5">Loading...</span></p>
+          <button id="btn5">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 6</h2>
+          <p>Status: <span id="status5">Loading...</span></p>
+          <button id="btn6">Toggle</button>
+        </div>
+      </div>
+
+      <button id="allOffBtn">All OFF</button>
+      <!-- <button id="logoutBtn">Logout</button> -->
+    <!-- </div>  -->
+<!--       <img src="img/img_avatar.png" alt="" width="200" class="rounded-circle img-thumbnail" />
+      <h1 class="display-4">Sumitro Hadi Harto</h1>
+      <p class="lead">Web Dev | Web Design</p>
+ -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,160L20,170.7C40,181,80,203,120,218.7C160,235,200,245,240,240C280,235,320,213,360,197.3C400,181,440,171,480,165.3C520,160,560,160,600,154.7C640,149,680,139,720,128C760,117,800,107,840,138.7C880,171,920,245,960,272C1000,299,1040,277,1080,240C1120,203,1160,149,1200,138.7C1240,128,1280,160,1320,154.7C1360,149,1400,107,1420,85.3L1440,64L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Akhir Jumbotron  -->
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+       <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Lantai Bawah Control Dashboard</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center fs-5 text-center">
+        <div class="relay-card">
+          <h2>Relay 1</h2>
+          <p>Status: <span id="status1">Loading...</span></p>
+          <button id="btn1">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 2</h2>
+          <p>Status: <span id="status2">Loading...</span></p>
+          <button id="btn2">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 3</h2>
+          <p>Status: <span id="status3">Loading...</span></p>
+          <button id="btn3">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 4</h2>
+          <p>Status: <span id="status4">Loading...</span></p>
+          <button id="btn4">Toggle</button>
+        </div>
+        <div class="relay-card">
+          <h2>Relay 5</h2>
+          <p>Status: <span id="status5">Loading...</span></p>
+          <button id="btn5">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 6</h2>
+          <p>Status: <span id="status5">Loading...</span></p>
+          <button id="btn6">Toggle</button>
+        </div>
+      </div>
+
+          <!-- <div class="col-md-4">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex iste perspiciatis quo neque et. Incidunt officia nostrum non id esse.</p>
+          </div>
+          <div class="col-md-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed fugiat nostrum magni rem, tempore laboriosam est expedita molestiae aspernatur ducimus fuga accusamus ex qui iusto?</p>
+          </div> -->
+        </div>
+      </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#e2edff"
+          fill-opacity="1"
+          d="M0,96L26.7,128C53.3,160,107,224,160,256C213.3,288,267,288,320,282.7C373.3,277,427,267,480,261.3C533.3,256,587,256,640,256C693.3,256,747,256,800,213.3C853.3,171,907,85,960,85.3C1013.3,85,1067,171,1120,181.3C1173.3,192,1227,128,1280,122.7C1333.3,117,1387,171,1413,197.3L1440,224L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Akhir About -->
+
+    <!-- projects -->
+    <section id="projects">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Lantai Atas Control Dashboard</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center fs-5 text-center">
+          <!-- <div class="col-md-6"> -->
+        <div class="relay-card">
+          <h2>Relay 1</h2>
+          <p>Status: <span id="status1">Loading...</span></p>
+          <button id="btn1">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 2</h2>
+          <p>Status: <span id="status2">Loading...</span></p>
+          <button id="btn2">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 3</h2>
+          <p>Status: <span id="status3">Loading...</span></p>
+          <button id="btn3">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 4</h2>
+          <p>Status: <span id="status4">Loading...</span></p>
+          <button id="btn4">Toggle</button>
+        </div>
+        <div class="relay-card">
+          <h2>Relay 5</h2>
+          <p>Status: <span id="status5">Loading...</span></p>
+          <button id="btn5">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 6</h2>
+          <p>Status: <span id="status5">Loading...</span></p>
+          <button id="btn6">Toggle</button>
+        </div>
+      <!-- </div> -->
+<!--             <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" aria-describedby="name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="email" />
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" rows=""></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Kirim</button>
+            </form> -->
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,128L26.7,154.7C53.3,181,107,235,160,250.7C213.3,267,267,245,320,245.3C373.3,245,427,267,480,250.7C533.3,235,587,181,640,165.3C693.3,149,747,171,800,176C853.3,181,907,171,960,181.3C1013.3,192,1067,224,1120,213.3C1173.3,203,1227,149,1280,117.3C1333.3,85,1387,75,1413,69.3L1440,64L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- end projects -->
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col text-center">
+            <h2>Luar Ruang Control Dashboard</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+        <div class="relay-card">
+          <h2>Relay 1</h2>
+          <p>Status: <span id="status1">Loading...</span></p>
+          <button id="btn1">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 2</h2>
+          <p>Status: <span id="status2">Loading...</span></p>
+          <button id="btn2">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 3</h2>
+          <p>Status: <span id="status3">Loading...</span></p>
+          <button id="btn3">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 4</h2>
+          <p>Status: <span id="status4">Loading...</span></p>
+          <button id="btn4">Toggle</button>
+        </div>
+        <div class="relay-card">
+          <h2>Relay 5</h2>
+          <p>Status: <span id="status5">Loading...</span></p>
+          <button id="btn5">Toggle</button>
+        </div>
+
+        <div class="relay-card">
+          <h2>Relay 6</h2>
+          <p>Status: <span id="status5">Loading...</span></p>
+          <button id="btn6">Toggle</button>
+        </div>
+      </div>
+<!--           <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/1.jpg" class="card-img-top" alt="project1" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/2.jpg" class="card-img-top" alt="project1" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/3.jpg" class="card-img-top" alt="project1" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/4.jpg" class="card-img-top" alt="project1" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/winner.jpg" class="card-img-top" alt="project1" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+ -->        </div>
+      </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#e2edff"
+          fill-opacity="1"
+          d="M0,96L26.7,128C53.3,160,107,224,160,256C213.3,288,267,288,320,282.7C373.3,277,427,267,480,261.3C533.3,256,587,256,640,256C693.3,256,747,256,800,213.3C853.3,171,907,85,960,85.3C1013.3,85,1067,171,1120,181.3C1173.3,192,1227,128,1280,122.7C1333.3,117,1387,171,1413,197.3L1440,224L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+        ></path>
+      </svg>
+
+    </section>
+    <!-- end contact -->
+
+    <!-- iamges -->
+    <section id="images">
+      <div id="productsDiv" class="container">
+        <div id="productcard">
+          <img src="img/1.jpg" class="thumb mt-2" id="thumb1">
+          <p class="titlex" id="title1">ABCDEFG</p>
+            <ul class="points">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+                <li>F</li>
+                <li>G</li>
+            </ul>
+            <h5>abcd</h5>
+          <button class="btn" id="detbtns" >Lihat Detail</button>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Image Control Dashboard</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center fs-5 text-center">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/1.jpg" class="card-img-top" alt="project1" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/2.jpg" class="card-img-top" alt="project1" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/3.jpg" class="card-img-top" alt="project1" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/4.jpg" class="card-img-top" alt="project1" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/winner.jpg" class="card-img-top" alt="project1" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+<!--           <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" aria-describedby="name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="email" />
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" rows=""></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Kirim</button>
+            </form>
+          </div> -->
+        </div>
+      </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,160L20,170.7C40,181,80,203,120,218.7C160,235,200,245,240,240C280,235,320,213,360,197.3C400,181,440,171,480,165.3C520,160,560,160,600,154.7C640,149,680,139,720,128C760,117,800,107,840,138.7C880,171,920,245,960,272C1000,299,1040,277,1080,240C1120,203,1160,149,1200,138.7C1240,128,1280,160,1320,154.7C1360,149,1400,107,1420,85.3L1440,64L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Akhir Jumbotron  -->
+
+    <!-- Detail -->
+    <section id="detail">
+      <div class="container">
+       <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Detail Image Control Dashboard</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center fs-5 text-center">
+XXX
+        </div>
+      </div>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#0d6efd"
+          fill-opacity="1"
+          d="M0,224L26.7,186.7C53.3,149,107,75,160,80C213.3,85,267,171,320,224C373.3,277,427,299,480,277.3C533.3,256,587,192,640,176C693.3,160,747,192,800,218.7C853.3,245,907,267,960,250.7C1013.3,235,1067,181,1120,181.3C1173.3,181,1227,235,1280,229.3C1333.3,224,1387,160,1413,128L1440,96L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+        ></path>
+      </svg>
+<!--       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,128L26.7,154.7C53.3,181,107,235,160,250.7C213.3,267,267,245,320,245.3C373.3,245,427,267,480,250.7C533.3,235,587,181,640,165.3C693.3,149,747,171,800,176C853.3,181,907,171,960,181.3C1013.3,192,1067,224,1120,213.3C1173.3,203,1227,149,1280,117.3C1333.3,85,1387,75,1413,69.3L1440,64L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+        ></path>
+      </svg> -->
+<!--       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,128L26.7,154.7C53.3,181,107,235,160,250.7C213.3,267,267,245,320,245.3C373.3,245,427,267,480,250.7C533.3,235,587,181,640,165.3C693.3,149,747,171,800,176C853.3,181,907,171,960,181.3C1013.3,192,1067,224,1120,213.3C1173.3,203,1227,149,1280,117.3C1333.3,85,1387,75,1413,69.3L1440,64L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+        ></path>
+      </svg>
+ -->    </section>
+    <!-- end projects -->
+
+    <!-- footer -->
+    <footer class="bg-primary text-white text-center pb-5">
+      <i>wmdr @<span id="dateHere"></span></i>
+      <p>Created with <i class="bi bi-heart-fill text-danger" id="dateHere"></i> by <a href="detik.com" class="text-white fw-bold">wmdr</a></p>
+    </footer>
+    <!-- end footer -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <h1>HELLO SELAMAT DATANG DI HALAMAN ADMIN</h1>
+    <button id="logout-button" value="ok">Logout</button>  -->
+
+    <script type="module" src="firebaseconfig.js"></script>
+
+
+<script>
+    theDate();
+
+      function theDate() {
+        var date - new Date();
+        var months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        var currentDate = date.getDate();
+        var month = months[date.getMonth()];
+        var year = date.getFullYear();
+
+        // var todaysDate = document.getElementById("dateHere").innerHTML = currentDate + "/" + \* month + "/" + \* year;
+        var todaysDate = document.getElementById("dateHere").innerHTML = year;
+      }
+</script>
+
+
+    <script type="module">
+      import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-auth.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAcKXxJwjhm9s7hkcb4tStxz8j_18q1Ua4",
+        authDomain: "loginweb-d5158.firebaseapp.com",
+        databaseURL: "https://loginweb-d5158-default-rtdb.firebaseio.com",
+        projectId: "loginweb-d5158",
+        storageBucket: "loginweb-d5158.appspot.com",
+        messagingSenderId: "977139409443",
+        appId: "1:977139409443:web:c6dbce940932fec4c3c796"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      let logoutButton = document.getElementById("logout-button");
+      console.log(logoutButton);
+
+      logoutButton.addEventListener("click", (e) => {
+        const auth = getAuth(app);
+        signOut(auth)
+          .then(() => {
+            alert("sukses logout");
+            location.href = "http://127.0.0.1:5500/auth_firebase_cdn/index.html";
+          })
+          .catch((error) => {});
+      });
+
+    </script>
+
+<script>
+  function getShortTitle(){
+    if(title.length > 50) title = title.substring(0,48):
+      else return title;
+    return title +"...";
+  }
+</script>
+   </body>
+</html>

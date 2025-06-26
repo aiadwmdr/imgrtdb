@@ -1,0 +1,74 @@
+body {
+  min-height: 3000px;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #e2edff;
+}
+
+#projects, #images {
+  background-color: #e2edff;
+}
+
+/*#images {
+  background-color: #e2edff;
+}
+*/
+section {
+  padding-top: 5rem;
+}
+
+
+#productsDiv{
+  display: flex;
+  /*justify-content: center;*/
+  flex-wrap: wrap;
+  
+}
+
+.productcard {
+  border: 1px lightgray solid;
+  height: 510px;
+  width: 290px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: border-color .3s;
+}
+
+.productcard:hover {
+  border-color: darkblue;
+}
+
+.thumb{
+  height: 160px;
+  width: 220px;
+  cursor: pointer; 
+}
+
+.btn{
+  background-color: navy;
+  color: white;
+  width: 90%;
+  margin-bottom: 15px;  
+}
+
+.btn:hover{
+  background-color: rgb(1, 1, 87 / 1.0);
+  color: wheat;
+}
+
+.titlex{
+  color: darkblue;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer; 
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 100%;
+  text-align: center;
+
+}
