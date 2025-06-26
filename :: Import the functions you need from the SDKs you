@@ -1,0 +1,35 @@
+// Import the functions you need from the SDKs you need
+//import { initializeApp } from "firebase/app";
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js";
+import { getDatabase, set, ref, update, delete } from "https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBwzXNT_jYjFTFDDsu3Av7CYMVuZbMhKT4",
+  authDomain: "webapps-6943d.firebaseapp.com",
+  databaseURL: "https://webapps-6943d-default-rtdb.firebaseio.com",
+  projectId: "webapps-6943d",
+  storageBucket: "webapps-6943d.firebasestorage.app",
+  messagingSenderId: "629085566327",
+  appId: "1:629085566327:web:bcbb0afe0a542a98eadd72"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+
+
+<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+// ...
+
+<script defer src="./init-firebase.js"></script>
